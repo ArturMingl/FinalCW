@@ -10,8 +10,9 @@ import java.util.Scanner;
 
 public class View {
 
-    ConsoleMenu menu = new ConsoleMenu();
-    static AnimalLists animals = new AnimalLists();
+    private ConsoleMenu menu = new ConsoleMenu();
+    private static AnimalLists animals = new AnimalLists();
+
 
     public void hello() {
         System.out.println("Добро пожаловать в реестр животных");

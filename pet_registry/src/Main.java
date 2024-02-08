@@ -8,8 +8,8 @@ import static java.lang.System.exit;
 
 public class Main {
     public static void main(String[] args) {
-
         View view = new View();
+        view.hello();
         view.getMenu();
     }
 }
