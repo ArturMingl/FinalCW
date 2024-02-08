@@ -1,6 +1,7 @@
 package animals;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Pet extends Animal{
 
@@ -19,8 +20,13 @@ public class Pet extends Animal{
     @Override
     public String toString() {
         return getClass().getSimpleName() +
-                "{name-'" + getName() + '\'' +
-                ", birthDate-" + getBirthDate() +
-                ", commands-" + getCommands() + '}';
+                "{Имя-'" + getName() + '\'' +
+                ", Дата рождения-" + getBirthDate() +
+                ", Изученные команды-" + getCommands() + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName()) + Objects.hash(getBirthDate());
     }
 }
