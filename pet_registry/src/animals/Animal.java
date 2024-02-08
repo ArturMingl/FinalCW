@@ -44,12 +44,4 @@ public class Animal {
             this.commands.add(command);
         }
     }
-
-    @Override
-    public String toString() {
-        return "Animal{" +
-                "name-'" + name + '\'' +
-                ", birthDate-" + birthDate +
-                ", commands-" + commands + '}';
-    }
 }
