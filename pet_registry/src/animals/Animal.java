@@ -1,4 +1,5 @@
 package animals;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -7,15 +8,19 @@ import java.util.ArrayList;
  * и список изученных команд.
  */
 public class Animal {
+    private int id;
     private String name;
     private LocalDate birthDate;
     private ArrayList<String> commands = new ArrayList<>();
 
 
-    public Animal(String name, LocalDate birthDate){
+    public Animal(int id, String name, LocalDate birthDate) {
+        setId(id);
         setName(name);
         setBirthDate(birthDate);
     }
+
+    public int getId() {return id;}
 
     public String getName() {
         return name;
@@ -29,6 +34,8 @@ public class Animal {
         return commands;
     }
 
+    public void setId(int id) {this.id = id;}
+
     public void setName(String name) {
         this.name = name;
     }
@@ -38,10 +45,12 @@ public class Animal {
     }
 
     public void addCommand(String command) {
-        if(this.commands.contains(command)){
+        if (this.commands.contains(command)) {
             return;
-        }else {
+        } else {
             this.commands.add(command);
         }
     }
+
+
 }

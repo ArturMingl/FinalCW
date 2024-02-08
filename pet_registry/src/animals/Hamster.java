@@ -4,8 +4,8 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Hamster extends Pet{
-    public Hamster(String name, LocalDate birthDate) {
-        super(name, birthDate);
+    public Hamster(int id, String name, LocalDate birthDate) {
+        super(id, name, birthDate);
     }
 
     @Override

@@ -18,27 +18,31 @@ public class AnimalLists {
 
     public void createPet(int type, String name, LocalDate birthDate) {
         try (Counter counter = new Counter()) {
-            counter.add();
             switch (type) {
                 case 1 -> {
-                    Cat cat = new Cat(name, birthDate);
+                    Cat cat = new Cat(counter.getCount(),name, birthDate);
                     addPet(cat);
                 }
                 case 2 -> {
-                    Dog dog = new Dog(name, birthDate);
+                    Dog dog = new Dog(counter.getCount(), name, birthDate);
                     addPet(dog);
                 }
                 case 3 -> {
-                    Hamster hamster = new Hamster(name, birthDate);
+                    Hamster hamster = new Hamster(counter.getCount(), name, birthDate);
                     addPet(hamster);
                 }
             }
+            counter.add();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            System.out.println("Ошибка: " + e.getMessage());
         }
     }
 
     public ArrayList<Pet> getPets() {
         return pets;
+    }
+
+    public void getPetCommands(Pet p){
+        p.getCommands();
     }
 }

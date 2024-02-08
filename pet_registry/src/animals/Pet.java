@@ -5,8 +5,8 @@ import java.util.Objects;
 
 public class Pet extends Animal{
 
-    public Pet(String name, LocalDate birthDate) {
-        super(name, birthDate);
+    public Pet(int id, String name, LocalDate birthDate) {
+        super(id, name, birthDate);
     }
 
     @Override
@@ -20,7 +20,8 @@ public class Pet extends Animal{
     @Override
     public String toString() {
         return getClass().getSimpleName() +
-                "{Имя-'" + getName() + '\'' +
+                "{ID-'" + getId() + '\'' +
+                ", Имя-'" + getName() + '\'' +
                 ", Дата рождения-" + getBirthDate() +
                 ", Изученные команды-" + getCommands() + '}';
     }
