@@ -1,22 +1,15 @@
-import animals.Cat;
-import animals.Pet;
+import Controller.ConsoleMenu;
+import Model.Counter;
+import View.View;
 
-import java.time.LocalDate;
+import java.util.Scanner;
+
+import static java.lang.System.exit;
 
 public class Main {
     public static void main(String[] args) {
 
-        Cat cat1 = new Cat("Mary", LocalDate.of(2021, 8, 15));
-        cat1.addCommand("дай лапу");
-        cat1.addCommand("дай другую лапу");
-        cat1.addCommand("дай лапу");
-        System.out.println(cat1);
-
-        Cat cat2 = new Cat("Mary", LocalDate.of(2021, 8, 15));
-        cat2.addCommand("дай лапу");
-        System.out.println(cat2);
-        System.out.println(cat1.hashCode());
-        System.out.println(cat2.hashCode());
-
+        View view = new View();
+        view.getMenu();
     }
 }
