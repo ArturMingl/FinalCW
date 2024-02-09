@@ -28,6 +28,6 @@ public class Pet extends Animal{
 
     @Override
     public int hashCode() {
-        return Objects.hash(getName()) + Objects.hash(getBirthDate());
+        return Objects.hash(getId());
     }
 }

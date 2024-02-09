@@ -13,6 +13,6 @@ public class Dog extends Pet{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Dog dog = (Dog) o;
-        return Objects.equals(getName(), dog.getName()) && Objects.equals(getBirthDate(), dog.getBirthDate());
+        return Objects.equals(getId(), dog.getId());
     }
 }

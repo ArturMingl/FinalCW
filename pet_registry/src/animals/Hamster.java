@@ -13,6 +13,6 @@ public class Hamster extends Pet{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Hamster hamster = (Hamster) o;
-        return Objects.equals(getName(), hamster.getName()) && Objects.equals(getBirthDate(), hamster.getBirthDate());
+        return Objects.equals(getId(), hamster.getId());
     }
 }
